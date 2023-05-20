@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+.container {
+  width: 400px;
+  height: 400px;
+  margin: 100px auto;
+  background: #eee;
+  perspective: 800px;
+  border-radius: 10px;
+}
+.container .wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s ease-in-out;
+  border-radius: 10px;
+}
+
+/* .container .wrapper:hover {
+  transform: rotateY(180deg);
+} */
+
+.container .wrapper.rear {
+  transform: rotateY(180deg);
+}
+
+.container .wrapper .front,
+.back {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  position: absolute;
+  backface-visibility: hidden;
+  border-radius: 10px;
+}
+.container .wrapper .front {
+  background: rgb(4, 6, 99);
+}
+.container .wrapper .back {
+  background: rgb(26, 143, 197);
+  transform: rotateY(180deg);
+}
+
+/* login css style */
+
+.front h1 {
+  text-align: center;
+  margin: 75px 0 40px 0;
+}
+.front form {
+  /* background: #000; */
+  margin-left: 50%;
+  width: 250px;
+  transform: translateX(-50%);
+}
+.front form input {
+  display: block;
+  width: 100%;
+  background: none;
+  text-align: center;
+  padding: 5px 15px;
+  border: 2px solid rgb(0, 47, 255);
+  color: #fff;
+  margin-bottom: 20px;
+  border-radius: 40px;
+  transition: transform 0.2s ease;
+}
+
+.front form input[name='usrnm']:focus,
+input[name='usrpass']:focus {
+  outline: none;
+  transform: scale(1.2);
+}
+
+.front form input[type='submit'] {
+  width: 120px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.front form input[type='submit']:hover {
+  background: rgb(6, 104, 216);
+}
+.front h6 {
+  text-align: center;
+  margin-top: 50px;
+}
+.front h6 span {
+  color: aqua;
+  cursor: pointer;
+}
+
+/* .back form {
+  background: #000;
+  margin: 0;
+  top: 0;
+  left: 0;
+} */

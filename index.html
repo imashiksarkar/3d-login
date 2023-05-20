@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log-In Page</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper" id="card">
+        <!-- front -->
+        <div class="front">
+          <h1>Log In</h1>
+          <form>
+            <input type="text" name="usrnm" />
+            <input type="password" name="usrpass" />
+            <input type="submit" value="Login" name="loginbtn" />
+          </form>
+          <h6>
+            Don't Have Any Account? <span id="signUpSwicher">Sign Up</span>
+          </h6>
+        </div>
+
+        <!-- back -->
+        <div class="back front">
+          <h1>Sign Up</h1>
+          <form>
+            <input type="text" name="usrnm" />
+            <input type="password" name="usrpass" />
+            <input type="submit" value="Login" name="loginbtn" />
+          </form>
+          <h6>
+            Already have an Account? <span id="signInSwicher">Sign In</span>
+          </h6>
+        </div>
+      </div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
